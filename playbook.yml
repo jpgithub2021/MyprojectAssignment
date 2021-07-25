@@ -14,7 +14,7 @@
   - name: pull the image
     command: docker pull sonal04/addressbook:1
   - name: run the image
-    command:  docker run -itd -P sonal04/addressbook:1
+    command:  docker run -itd -p 8080:8585 sonal04/addressbook:1
     notify: restart docker
   handlers:
   - name: restart docker
